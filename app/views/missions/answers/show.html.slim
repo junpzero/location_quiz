@@ -1,0 +1,13 @@
+= render 'partials/header', title: 'Answer'
+= form_with url: mission_answer_path(@location.id)
+.p-answer
+  .p-answer__question-text
+    = "Q. #{@question.text}"
+  .p-answer__image
+    = image_tag @question.image_url
+  .p-answer__label
+    | Answer
+  .p-answer__form
+    - @question.answer.length.times do
+      = text_field nil, 'answer[]', maxlength: 1
+    = submit_tag '送信', class: 'c-button--yellow'

@@ -1,0 +1,42 @@
+.p-location {
+  &__sprite{
+    &__image{
+      img{
+        width: 100%;
+      }
+    }
+  }
+  &__description {
+    max-width: 354px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 13px;
+    padding-buttom: 10px;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    &__name{
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+    hr.partition{
+      margin-left: 10px;
+      width: 90%;
+      border-top: 1px solid #000000;
+    }
+    &__description{
+      text-align: left;
+      padding: 10px;
+      padding-top: 4px;
+
+    }
+  }
+  .p-location__button {
+    text-align: center;
+    margin-top: 70px;
+  }
+}

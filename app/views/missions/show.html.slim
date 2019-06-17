@@ -1,0 +1,17 @@
+= render 'partials/header', title: 'Mission'
+
+.p-compass
+  .p-compass__distance
+    .p-compass__distance__ato あと
+    .p-compass__distance__number.js-distanceNumber 1000
+    .p-compass__distance__unit.js-distanceUnit M
+  .p-compass__arrow
+    .p-compass__arrow__north N
+    img.js-compassArrow src="#{asset_path('arrow.png')}" data=({latitude: @location.latitude, longitude: @location.longitude})
+  .p-compass__hint
+    .p-compass__hint__title
+      | ヒント
+    .p-compass__hint__text
+      = @location.hint
+  .p-compass__button
+    = link_to '開く', mission_answer_path(@location), class: 'c-button--yellow disable js-compassNextBtn'

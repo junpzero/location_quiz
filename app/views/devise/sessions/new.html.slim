@@ -1,0 +1,20 @@
+.p-login
+  .p-login__logo
+    img.p-login__logo__image src="#{asset_path('logo.png')}"
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+   .p-login__fields
+    .p-login__fields__field
+      = f.label :eメール
+      br
+      = f.email_field :email, autofocus: true, autocomplete: "email", class: "p-text"
+    .p-login__fields__field
+      = f.label :パスワード
+      br
+      = f.password_field :password, autocomplete: "current-password", class: "p-text"
+    - if devise_mapping.rememberable?
+    / .field
+    /   = f.check_box :remember_me
+    /   = f.label :remember_me
+   .p-login__button
+    = f.submit "ログイン", class: 'c-button--black'
+/= render "devise/shared/links"

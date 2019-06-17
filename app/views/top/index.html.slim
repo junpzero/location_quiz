@@ -1,0 +1,8 @@
+.p-top
+  .p-top__logo
+    img.p-top__logo__image src="#{asset_path('logo.png')}"
+  .p-top__buttons
+    .p-top__buttons__button
+      = link_to 'ログイン', new_user_session_path, class: 'c-button'
+    .p-top__buttons__button
+      = link_to '新規登録', new_user_registration_path, class: 'c-button--black'

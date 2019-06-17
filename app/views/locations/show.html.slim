@@ -1,0 +1,14 @@
+= render 'partials/header', title: 'Answer'
+
+.p-location
+  .p-location__sprite
+    .p-location__sprite__image
+      = image_tag @location.image_url
+  .p-location__description
+    .p-location__description__name
+      = @location.name
+    hr.partition
+    .p-location__description__description
+      = simple_format(h(@location.description))
+  .p-location__button
+    = link_to '次へ', missions_path, class: 'c-button--yellow'

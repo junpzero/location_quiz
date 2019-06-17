@@ -1,0 +1,3 @@
+/ = render 'partials/header', title: 'Mission'
+= link_to mission_path(Location.first.id)
+  img src="#{asset_path('mission_index.png')}" style="width: 100%"

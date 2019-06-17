@@ -1,0 +1,26 @@
+.c-button {
+  width: 188px;
+  text-align: center;
+  background-color: #fff;
+  margin: 0 auto;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 8px 0;
+  font-size: 16px;
+  &--black {
+    @extend .c-button;
+    background-color: #000;
+    color: #fff;
+  }
+  &--yellow {
+    @extend .c-button;
+    background-color: #F5FF00;
+  }
+  &.disable {
+    pointer-events: none;
+    background-color: #999;
+  }
+}
